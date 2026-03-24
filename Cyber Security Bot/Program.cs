@@ -10,6 +10,14 @@ namespace Cyber_Security_Bot
     {
         static void Main(string[] args)
         {
+            // Instantiate the bot object
+
+            Cyber_Bot myBot = new Cyber_Bot();
+
+            // Call the greeting method
+
+            myBot.ShowGreeting();
+
         }
     }
 }
