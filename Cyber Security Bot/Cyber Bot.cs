@@ -9,6 +9,36 @@ namespace Cyber_Security_Bot
     internal class Cyber_Bot
     {
         public string UserName { get; set; }
+        public void PlayVoiceGreeting()
+
+        {
+
+            try
+
+            {
+
+                // System.Media is the built-in Windows library for sound
+
+                System.Media.SoundPlayer player = new System.Media.SoundPlayer("greeting.wav");
+
+                // Play() runs the sound in the background so the console doesn't freeze
+
+                player.Play();
+
+            }
+
+            catch (Exception ex)
+
+            {
+
+                // This stops the program from crashing if they forgot the "Copy if newer" step
+
+                Console.WriteLine("Audio file not found: " + ex.Message);
+
+            }
+
+        }
+
         public void ShowGreeting()
         {
             // Task 6: Enhanced UI (Colours)

@@ -14,9 +14,12 @@ namespace Cyber_Security_Bot
 
             Cyber_Bot myBot = new Cyber_Bot();
 
-            // Call the greeting method
 
+
+            // Call the greeting method
+            myBot.PlayVoiceGreeting();
             myBot.ShowGreeting();
+            
 
         }
     }
