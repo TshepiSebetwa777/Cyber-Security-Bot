@@ -70,5 +70,120 @@ namespace Cyber_Security_Bot
             Console.ResetColor();
         }
 
+        public void StartChatting()
+
+        {
+
+            Console.WriteLine("\nYou can start asking me questions. Type 'exit' to leave the chat.");
+
+            // 1. Set up the infinite loop so the bot keeps listening
+
+            while (true)
+
+            {
+
+                Console.ForegroundColor = ConsoleColor.Yellow;
+
+                Console.Write($"\n[{UserName}]: "); // Uses the name we saved earlier!
+
+                Console.ResetColor();
+
+                string input = Console.ReadLine();
+
+                if (string.IsNullOrWhiteSpace(input))
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("[Bot]: I didn't quite understand that. Could you rephrase?"); // Required phrase
+                    Console.ResetColor();
+                    continue; // This skips the rest of the loop and starts over at the top!
+                }
+                // Convert input to lowercase so it's easy to check
+
+                input = input.ToLower();
+
+                // Give the user a way to break the loop!
+
+                if (input == "exit")
+
+                {
+
+                    Console.WriteLine("[Bot]: Goodbye! Stay safe online.");
+
+                    break; // This breaks us out of the while loop entirely
+
+                }
+
+                // Task 4: Respond to basic cybersecurity questions
+
+                Console.ForegroundColor = ConsoleColor.Cyan;
+
+                if (input.Contains("how are you"))
+
+                {
+
+                    Console.WriteLine("[Bot]: I'm functioning perfectly, thank you! How can I help you secure your data today?");
+
+                }
+
+                else if (input.Contains("purpose"))
+
+                {
+
+                    Console.WriteLine("[Bot]: My purpose is to spread cybersecurity awareness and help you protect your digital life.");
+
+                }
+
+                else if (input.Contains("what can i ask"))
+
+                {
+
+                    Console.WriteLine("[Bot]: You can ask me about password safety, phishing, and safe browsing!");
+
+                }
+
+                else if (input.Contains("password"))
+
+                {
+
+                    Console.WriteLine("[Bot]: Always use strong, unique passwords. A mix of uppercase, lowercase, numbers, and symbols is best.");
+
+                }
+
+                else if (input.Contains("phishing"))
+
+                {
+
+                    Console.WriteLine("[Bot]: Phishing is when scammers try to trick you into revealing sensitive info. Don't click suspicious links!");
+
+                }
+
+                else if (input.Contains("safe browsing"))
+
+                {
+
+                    Console.WriteLine("[Bot]: For safe browsing, ensure websites use HTTPS and avoid public Wi-Fi for banking.");
+
+                }
+
+                else
+
+                {
+
+                    // Task 5: Default response for unsupported queries
+
+                    Console.WriteLine("[Bot]: I didn't quite understand that. Could you rephrase?");
+
+                }
+
+                Console.ResetColor();
+
+
+
+
+            }
+
+        }
+
+
     }
 }

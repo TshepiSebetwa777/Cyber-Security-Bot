@@ -17,9 +17,11 @@ namespace Cyber_Security_Bot
 
 
             // Call the greeting method
+           
             myBot.PlayVoiceGreeting();
             myBot.ShowGreeting();
-            
+            myBot.StartChatting();
+
 
         }
     }
